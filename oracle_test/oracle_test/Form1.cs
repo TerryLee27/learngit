@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
+// Add remark :
 namespace oracle_test
 {
     public partial class Form1 : Form
@@ -21,7 +21,8 @@ namespace oracle_test
         private void Form1_Load(object sender, EventArgs e)
         {
             ClientUtils.url = "tcp://10.103.16.71:8085";
-            string sql = "SELECT * FROM SAJET.G_PART_MATCH";
+            //Delete: string sql = "SELECT * FROM SAJET.G_PART_MATCH";
+			
             DataTable dt = ClientUtils.ExecuteSQL(sql).Tables[0];
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.DataSource = dt;
